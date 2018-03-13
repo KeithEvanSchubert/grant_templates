@@ -1,0 +1,255 @@
+% Keith Schubert's modifications to:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% NIH Grant Proposal for the Specific Aims and Research Plan Sections
+% LaTeX Template
+% Version 1.0 (21/10/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Erick Tatro (erickttr@gmail.com) with modifications by:
+% Vel (vel@latextemplates.com)
+%
+% Adapted from:
+% J. Hrabe (http://www.magalien.com/public/nih_grants_in_latex.html)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,notitlepage]{article}
+
+% A note on fonts: As of 2013, NIH allows Georgia, Arial, Helvetica, and Palatino Linotype. LaTeX doesn't have Georgia or Arial built in; you can try to come up with your own solution if you wish to use those fonts. Here, Palatino & Helvetica are available, leave the font you want to use uncommented while commenting out the other one.
+\usepackage{palatino} % Palatino font
+%\usepackage{helvet} % Helvetica font
+\renewcommand*\familydefault{\sfdefault} % Use the sans serif version of the font
+\usepackage[T1]{fontenc}
+\linespread{1.05} % A little extra line spread is better for the Palatino font
+\usepackage[final]{pdfpages}
+%\usepackage[]{biblatex}
+\usepackage{hyperref}
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{graphicx} % Required for including images
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage{wrapfig} % Allows in-line images
+\usepackage[labelfont=bf]{caption} % Make figure numbering in captions bold
+\usepackage[top=0.5in,bottom=0.5in,left=0.5in,right=0.5in]{geometry} % Reduce the size of the margin
+\pagestyle{empty} % Remove page numbers
+
+
+%\addbibresource{C:/Users/schubertk/Dropbox/bibs/KeithSchubertPublications16.bib}
+%\addbibresource{C:/Users/schubertk/Dropbox/bibs/colonoscopy.bib}
+
+
+\hyphenation{ionto-pho-re-tic iso-tro-pic fortran} % Specifies custom hyphenation points for words or words that shouldn't be hyphenated at all
+\newcommand{\instructions}[1]{}
+% Before submitting, comment out this line.
+%\renewcommand{\instructions}[1]{{\scriptsize \sc #1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% Specific Aims - ensures they are always the same
+\newcommand{\AIMI}{}
+\newcommand{\AIMIsh}{}
+\newcommand{\AIMII}{}
+\newcommand{\AIMIIsh}{}
+\newcommand{\AIMII}{}
+\newcommand{\AIMIIsh}{}
+
+% The title has an 81-character maximum.
+\title{}
+
+\author{
+Name\\
+Professor\\
+Electrical and Computer Engineering\\
+Baylor University\\
+\vspace{.1in}\\
+Collaborator Name \\
+Title\\
+Institution}
+
+\begin{document}
+
+
+
+\maketitle
+
+\begin{center}
+An NIH R01 proposal, submitted in response to \\
+{\em PAR-XX-XXX: INSERT TITLE OF PAR HERE}.
+\end{center}
+
+\vfill
+
+{\scriptsize Compiled on \today.}
+\clearpage
+
+\input{NIH_Letter}
+
+
+%----------------------------------------------------------------------------------------
+%	Summary
+%----------------------------------------------------------------------------------------
+
+
+\input{NIH_Summary}
+
+\clearpage
+
+%----------------------------------------------------------------------------------------
+%	Narrative
+%----------------------------------------------------------------------------------------
+
+\input{NIH_Narrative}
+
+\clearpage
+
+
+%----------------------------------------------------------------------------------------
+%	Facilities And Other Resources
+%----------------------------------------------------------------------------------------
+
+\input{NIH_Facilities}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	Equipment
+%----------------------------------------------------------------------------------------
+
+\input{NIH_Equipment}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%   Research & Related Senior/Key Person
+%----------------------------------------------------------------------------------------
+% make pdf of each NIH biosketch and include as below
+\includepdf[pages=-]{biosketch_name.pdf}%xxxx
+
+%----------------------------------------------------------------------------------------
+%   PHS398 Cover Page Supplement
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%   PHS398 Modular Budget  (and justification)
+%----------------------------------------------------------------------------------------
+
+\input{NIH_Budget_cfrip}
+
+\clearpage
+
+%make pdf of SPO budget and incliude below
+
+\includepdf[pages=-]{NameNum-YYbudget.pdf}
+
+\input{NIH_Budget_Justification}%xxxx
+
+\clearpage
+
+%----------------------------------------------------------------------------------------
+%   Research Plan
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%	SPECIFIC AIMS 1
+%----------------------------------------------------------------------------------------
+
+\input{NIH_Specific_Aims}%xxxx
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH Strategy 2
+%----------------------------------------------------------------------------------------
+
+\input{NIH_Research_Strategy}%xxxxx
+
+
+%\newpage
+
+%\input{NIH_Progress_Report}%only on renewals
+
+
+
+%------------------------------------------------
+
+\newpage
+
+\input{NIH_Protect_Human_Subjects}%xxxx
+
+
+%------------------------------------------------
+
+\newpage
+
+\input{NIH_Inclusion_Women_Minorities}%xxxx
+
+%------------------------------------------------
+
+\newpage
+
+%   \section*{8. Targeted/Planned Enrollment} - form to fill out
+
+
+\input{NIH_Inclusion_Children}%xxxx
+
+
+%------------------------------------------------
+
+%\newpage
+
+%\input{NIH_Vertebrate_Animals}
+
+
+%------------------------------------------------
+
+%\newpage
+
+%\input{NIH_Select_Agent_Research}
+
+
+%------------------------------------------------
+
+\newpage
+
+\input{NIH_PI_Leadership_Plan}%xxxx
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\newpage
+
+\section*{Bibliography \& References Cited}
+
+\nocite{*}
+%\printbibliography
+\bibliographystyle{ieeetr}
+\bibliography{bibfile}
+
+
+%------------------------------------------------
+
+\newpage
+
+\input{NIH_Consortium_Arrangements}
+
+%------------------------------------------------
+%    LOS
+%------------------------------------------------
+
+\newpage
+
+%   \section*{14. Letters of Support} - letters to attach
+
+\input{NIH_Resource_Sharing}
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
